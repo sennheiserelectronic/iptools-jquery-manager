@@ -23,14 +23,10 @@
       return settings;
     };
 
-    function getNamespacedEvent(name) {
-      return name + '.' + pluginName;
-    }
-
     this.destroy = function() {
       //unbindTemporaryEvents();
       //unbindUnobtrusiveEvents();
-      this.element.off(getNamespacedEvent('click')).removeData('plugin_' + pluginName);
+      this.element.removeData('plugin_' + pluginName);
     };
 
     function init() {
