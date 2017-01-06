@@ -7,10 +7,8 @@ Please don't edit files in the `dist` subdirectory as they are generated via Gru
 See [JavaScript coding conventions](http://conventions.interactive-pioneers.com/JavaScript) of Interactive Pioneers.
 
 ## Modifying the code
-First, ensure that you have the latest [Node.js](http://nodejs.org/) and [npm](http://npmjs.org/) installed.
 
-Test that Grunt's CLI and Bower are installed by running `grunt --version` and `bower --version`.  If the commands aren't found, run `npm install -g grunt-cli bower`.  For more information about installing the tools, see the [getting started with Grunt guide](http://gruntjs.com/getting-started) or [bower.io](http://bower.io/) respectively.
-
+1. Ensure that you have the latest [Node.js](http://nodejs.org/) and [npm](http://npmjs.org/) installed.
 1. Fork and clone the repo.
 1. Run `npm run install-dependencies` to install all dependencies.
 1. Run `grunt watch:qa` to watch this project for changes and QA automatically as code is changed.
