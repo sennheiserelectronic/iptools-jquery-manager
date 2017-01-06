@@ -1,0 +1,52 @@
+{
+  "name": "iptools-jquery-manager",
+  "version": "0.0.1",
+  "description": "Component manager for dynamic initialisation of IPT components from markup",
+  "homepage": "https://github.com/interactive-pioneers/iptools-jquery-manager",
+  "author": {
+    "name": "Interactive Pioneers GmbH",
+    "email": "hello@interactive-pioneers.de"
+  },
+  "contributors": [
+    {
+      "name": "Georg Meyer",
+      "email": "gm@interactive-pioneers.de"
+    },
+    {
+      "name": "Ain Tohvri",
+      "email": "at@interactive-pioneers.de"
+    }
+  ],
+  "license": "GPL-3.0",
+  "bugs": "https://github.com/interactive-pioneers/iptools-jquery-manager/issues",
+  "dependencies": {},
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-concurrent": "~2.2.1",
+    "grunt-contrib-clean": "~1.0.0",
+    "grunt-contrib-jshint": "~1.0.0",
+    "grunt-sass": "~1.1.0",
+    "grunt-contrib-uglify": "~0.11.1",
+    "grunt-contrib-watch": "~0.6.1",
+    "grunt-mocha": "~0.4.15",
+    "jit-grunt": "~0.9.1",
+    "time-grunt": "~1.3.0",
+    "grunt-jscs": "~2.7.0"
+  },
+  "engines": {
+    "node": ">=0.12.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/interactive-pioneers/iptools-jquery-manager.git"
+  },
+  "scripts": {
+    "test": "grunt travis --verbose"
+  },
+  "keywords": [
+    "javascript",
+    "manager",
+    "component",
+    "jquery"
+  ]
+}
