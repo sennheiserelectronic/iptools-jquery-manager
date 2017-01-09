@@ -33,6 +33,7 @@ module.exports = function(grunt) {
         files: [
           '<%= yeoman.src %>/iptools-jquery-manager.js',
           '<%= yeoman.test %>/spec/*.js',
+          '<%= yeoman.test %>/support/*.js',
           '<%= yeoman.test %>/index.html'
         ],
         tasks: ['test']
