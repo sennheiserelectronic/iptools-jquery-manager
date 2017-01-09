@@ -32,7 +32,7 @@
 
       it('expected to set title from component options in markup', function() {
         var component = $(selectors.dummyComponentWithOptions).data('plugin_iptDummyComponent');
-        return expect(component.settings.title).to.eql('Non-default Mocha test title');
+        return expect(component.getSettings().title).to.eql('Non-default Mocha test title');
       });
 
     });

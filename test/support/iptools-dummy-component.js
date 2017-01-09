@@ -13,7 +13,6 @@
     this.element = $(element);
 
     var settings = $.extend({}, defaults, options);
-    var self = this;
 
     this.getSettings = function() {
       return settings;

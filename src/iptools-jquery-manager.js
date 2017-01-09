@@ -21,7 +21,7 @@
 
     this.element = $(element);
 
-    this.settings = $.extend({}, defaults, options);
+    var settings = $.extend({}, defaults, options);
 
     this.destroy = function() {
       //unbindTemporaryEvents();
@@ -31,10 +31,8 @@
 
     this.initComponents = function() {
       $(selectors.componentNode).each(function(index, node) {
-        console.log('node is', node);
         var name = $(node).data(datas.component);
         var options = $(node).data(datas.options) || {};
-        console.log('options are', options);
         if (!$(node).data('plugin_' + name)) {
           $(node)[name](options);
         }
