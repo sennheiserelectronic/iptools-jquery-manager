@@ -45,7 +45,7 @@
       return settings;
     };
 
-    function handleAjaxComplete(event) {
+    function handleAjaxComplete() {
       self.initComponents();
     }
 
