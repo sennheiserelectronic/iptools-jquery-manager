@@ -30,9 +30,22 @@
         object.data(pluginName).destroy();
       });
 
-      it('expected to set title from component options in markup', function() {
-        var component = $(selectors.dummyComponentWithOptions).data('plugin_iptDummyComponent');
-        return expect(component.getSettings().title).to.eql('Non-default Mocha test title');
+      context('with component options set in markup', function() {
+
+        it('expected to set title from component options in markup', function() {
+          var component = $(selectors.dummyComponentWithOptions).data('plugin_iptDummyComponent');
+          return expect(component.getSettings().title).to.eql('Non-default Mocha test title');
+        });
+
+      });
+
+      context('without component options set in markup', function() {
+
+        it('expected to set default title', function() {
+          var component = $(selectors.dummyComponentWithoutOptions).data('plugin_iptDummyComponent');
+          return expect(component.getSettings().title).to.eql('Default title');
+        });
+
       });
 
     });
