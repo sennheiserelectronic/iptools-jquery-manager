@@ -25,12 +25,6 @@
     var settings = $.extend({}, defaults, options);
     var self = this;
 
-    this.destroy = function() {
-      //unbindTemporaryEvents();
-      //unbindUnobtrusiveEvents();
-      this.element.removeData('plugin_' + pluginName);
-    };
-
     this.initComponents = function() {
       $(selectors.componentNode).each(function(index, node) {
         var name = $(node).data(datas.component);
@@ -41,13 +35,22 @@
       });
     };
 
-    this.getSettings = function() {
-      return settings;
-    };
-
     function handleAjaxComplete() {
       self.initComponents();
     }
+
+    function removeEventHandlers() {
+      $(selectors.ajaxEventEmitter).off('ajax:complete', handleAjaxComplete);
+    }
+
+    this.destroy = function() {
+      removeEventHandlers();
+      this.element.removeData('plugin_' + pluginName);
+    };
+
+    this.getSettings = function() {
+      return settings;
+    };
 
     function addEventListeners() {
       $(selectors.ajaxEventEmitter).on('ajax:complete', handleAjaxComplete);
