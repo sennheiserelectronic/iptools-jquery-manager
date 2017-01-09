@@ -12,7 +12,8 @@
     };
 
     var selectors = {
-      componentNode: '*[data-component]'
+      componentNode: '*[data-component]',
+      ajaxEventEmitter: 'body'
     };
 
     var defaults = {
@@ -22,6 +23,7 @@
     this.element = $(element);
 
     var settings = $.extend({}, defaults, options);
+    var self = this;
 
     this.destroy = function() {
       //unbindTemporaryEvents();
@@ -39,8 +41,20 @@
       });
     };
 
+    this.getSettings = function() {
+      return settings;
+    };
+
+    function handleAjaxComplete(event) {
+      self.initComponents();
+    }
+
+    function addEventListeners() {
+      $(selectors.ajaxEventEmitter).on('ajax:complete', handleAjaxComplete);
+    }
+
     function init() {
-      //addEventListeners();
+      addEventListeners();
     }
 
     init();

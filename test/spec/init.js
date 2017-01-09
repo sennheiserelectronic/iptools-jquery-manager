@@ -7,8 +7,9 @@
 
   describe('iptManager', function() {
 
+    var callback = function() {};
     var config = {
-      callback: function() {  }
+      callback: callback
     };
 
     var pluginName = 'plugin_iptManager';
@@ -27,6 +28,10 @@
 
       it('expected to construct object', function() {
         return expect(object).to.be.an.object;
+      });
+
+      it('expected to set callback', function() {
+        return expect(object.data(pluginName).getSettings().callback).to.eql(callback);
       });
 
     });
