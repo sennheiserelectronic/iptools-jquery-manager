@@ -1,7 +1,7 @@
 {
   "name": "iptools-jquery-manager",
   "description": "Component manager for dynamic initialisation of IPT components from markup",
-  "main": "dist/iptools-jquery-manager.js",
+  "main": "src/iptools-jquery-manager.js",
   "license": "GPL-3.0",
   "ignore": [
     ".git*",
