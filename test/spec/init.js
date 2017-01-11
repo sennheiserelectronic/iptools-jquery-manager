@@ -9,7 +9,9 @@
 
     var callback = function() {};
     var config = {
-      callback: callback
+      callback: callback,
+      initEvent: 'partialLoadComplete',
+      initEventEmitter: 'body'
     };
 
     var pluginName = 'plugin_iptManager';

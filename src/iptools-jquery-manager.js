@@ -12,12 +12,13 @@
     };
 
     var selectors = {
-      componentNode: '*[data-component]',
-      ajaxEventEmitter: 'body'
+      componentNode: '*[data-component]'
     };
 
     var defaults = {
-      callback: null
+      callback: null,
+      initEvent: 'ajax:complete',
+      initEventEmitter: 'body'
     };
 
     this.element = $(element);
@@ -35,12 +36,12 @@
       });
     };
 
-    function handleAjaxComplete() {
+    function handleInitRequested() {
       self.initComponents();
     }
 
     function removeEventHandlers() {
-      $(selectors.ajaxEventEmitter).off('ajax:complete', handleAjaxComplete);
+      $(settings.initEventEmitter).off(settings.initEvent, handleInitRequested);
     }
 
     this.destroy = function() {
@@ -53,7 +54,7 @@
     };
 
     function addEventListeners() {
-      $(selectors.ajaxEventEmitter).on('ajax:complete', handleAjaxComplete);
+      $(settings.initEventEmitter).on(settings.initEvent, handleInitRequested);
     }
 
     function init() {

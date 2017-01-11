@@ -6,7 +6,7 @@ Component manager for dynamic initialisation of IPT components from markup.
 
 - Initialise [iptools-jquery](https://github.com/interactive-pioneers/iptools-jquery) components
    - with options from markup
-   - on `ajax:complete`, e.g. on applications using [jquery-ujs](https://github.com/rails/jquery-ujs)
+   - on custom event, e.g. `ajax:complete` (default) on applications using [jquery-ujs](https://github.com/rails/jquery-ujs)
 
 ## Requirements
 
@@ -28,7 +28,9 @@ Components that should automatically initialise must define `data-component` and
 
 ```js
 $('body').iptManager({
-  callback: function() {} // Callback function executed on component initialisation
+  callback: function() {}, // Callback function executed on component initialisation. Defaults to null.
+  initEvent: 'ajax:complete', // Initialisation event that is thrown to (re)initialise components. Defaults to ajax:complete.
+  initEventEmitter: 'body' // Selector for element that will emit initialisation event. Defaults to body.
 });
 ```
 
