@@ -5,8 +5,13 @@ Component manager for dynamic initialisation of IPT components from markup.
 ## Features
 
 - Initialise [iptools-jquery](https://github.com/interactive-pioneers/iptools-jquery) components
-   - with options from markup
-   - on custom event, e.g. `ajax:complete` (default) on applications using [jquery-ujs](https://github.com/rails/jquery-ujs)
+    - with options from markup using
+      - `initComponents()` API call, e.g.
+
+        ```js
+        $('body').data('plugin_iptManager').initComponents();
+        ```
+     - on custom event, e.g. `ajax:complete` (default) on applications using [jquery-ujs](https://github.com/rails/jquery-ujs)
 
 ## Requirements
 
