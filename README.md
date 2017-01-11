@@ -11,7 +11,7 @@ Component manager for dynamic initialisation of IPT components from markup.
         ```js
         $('body').data('plugin_iptManager').initComponents();
         ```
-     - on custom event, e.g. `ajax:complete` (default) on applications using [jquery-ujs](https://github.com/rails/jquery-ujs)
+     - on custom event, e.g. `ajax:complete` (default) when using [jquery-ujs](https://github.com/rails/jquery-ujs)
 
 ## Requirements
 
