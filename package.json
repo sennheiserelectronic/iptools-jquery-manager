@@ -42,7 +42,7 @@
   },
   "scripts": {
     "test": "grunt travis --verbose",
-    "install-dependencies": "npm i && bower i"
+    "install": "bower i"
   },
   "keywords": [
     "javascript",
