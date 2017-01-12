@@ -10,15 +10,15 @@ See [JavaScript coding conventions](http://conventions.interactive-pioneers.com/
 
 1. Ensure that you have the latest [Node.js](http://nodejs.org/) and [npm](http://npmjs.org/) installed.
 1. Fork and clone the repo.
-1. Run `npm run install-dependencies` to install all dependencies.
-1. Run `grunt watch:qa` to watch this project for changes and QA automatically as code is changed.
+1. Run `npm i` to install all dependencies.
+1. Run `npm start` to watch this project for changes and QA automatically as code is changed.
 
 ## Submitting pull requests
 
 1. Create a new branch, please don't work in your `master` branch directly.
 1. Add failing tests for the change you want to make. Run `grunt` to see the tests fail.
 1. Fix stuff.
-1. Run `grunt qa` to see if the tests pass. Repeat steps 2-4 until done.
+1. Run `npm run grunt qa` to see if the tests pass. Repeat steps 2-4 until done.
 1. Update the documentation to reflect any changes.
 1. Push to your fork and submit a pull request.
 
@@ -32,6 +32,6 @@ See [JavaScript coding conventions](http://conventions.interactive-pioneers.com/
 
 Following tasks are there to help with development:
 
-- `grunt watch:bdd` listens to tests and source, reruns tests
-- `grunt qa` run QA task that includes tests and JSHint
-- `grunt build` build and minify source to dist/
+- `npm run grunt watch:bdd` listens to tests and source, reruns tests
+- `npm run grunt qa` run QA task that includes tests and JSHint
+- `npm run grunt build` build and minify source to dist/
