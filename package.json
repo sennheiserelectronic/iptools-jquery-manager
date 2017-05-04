@@ -32,7 +32,9 @@
     "jit-grunt": "~0.10.0",
     "time-grunt": "~1.4.0",
     "grunt-jscs": "~3.0.1",
-    "bower": "~1.8.0"
+    "bower": "~1.8.0",
+    "chai": "~3.5.0",
+    "jquery": "^1.11.3"
   },
   "engines": {
     "node": ">=6.2.0"
