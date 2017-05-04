@@ -53,5 +53,11 @@
     "manager",
     "component",
     "jquery"
+  ],
+  "files": [
+    "*.md",
+    "LICENSE",
+    "src",
+    "dist"
   ]
 }
