@@ -1,4 +1,4 @@
-# iptools-jquery-manager [![Build Status](http://img.shields.io/travis/interactive-pioneers/iptools-jquery-manager.svg)](https://travis-ci.org/interactive-pioneers/iptools-jquery-manager) [![Bower version](https://badge.fury.io/bo/iptools-jquery-manager.svg)](http://badge.fury.io/bo/iptools-jquery-manager)
+# iptools-jquery-manager [![Build Status](http://img.shields.io/travis/interactive-pioneers/iptools-jquery-manager.svg)](https://travis-ci.org/interactive-pioneers/iptools-jquery-manager) [![npm version](https://badge.fury.io/js/iptools-jquery-manager.svg)](https://badge.fury.io/js/iptools-jquery-manager) [![Bower version](https://badge.fury.io/bo/iptools-jquery-manager.svg)](http://badge.fury.io/bo/iptools-jquery-manager)
 
 Component manager for dynamic initialisation of IPT components from markup.
 
