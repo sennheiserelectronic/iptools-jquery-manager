@@ -15,7 +15,7 @@ Component manager for dynamic initialisation of IPT components from markup.
 
 ## Requirements
 
-- `jQuery >=1.11.3 <3.0.0`
+- `jQuery >=1.11.3 <4.0.0`
 
 ## Usage
 
