@@ -1,6 +1,6 @@
 {
   "name": "iptools-jquery-manager",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Component manager for dynamic initialisation of IPT components from markup",
   "homepage": "https://github.com/interactive-pioneers/iptools-jquery-manager",
   "author": {
