@@ -52,6 +52,31 @@
 
       });
 
+      context('with default component options in config', function() {
+        var configWithOptions = Object.assign({}, config, {
+                                                            iptDummyComponent: {
+                                                              title: 'Manager default title'
+                                                            }
+                                                          });
+
+        beforeEach(function() {
+          object = $(selectors.body).iptManager(configWithOptions);
+          $(config.initEventEmitter).trigger('iptComponent:complete');
+        });
+
+        afterEach(function() {
+          $(selectors.dummyComponentWithoutOptions).data('plugin_iptDummyComponent').destroy();
+          $(selectors.dummyComponentWithOptions).data('plugin_iptDummyComponent').destroy();
+          object.data(pluginName).destroy();
+        });
+
+        it('expected to set default title from config', function() {
+          var component = $(selectors.dummyComponentWithoutOptions).data('plugin_iptDummyComponent');
+          return expect(component.getSettings().title).to.eql('Manager default title');
+        });
+
+      });
+
       context('with configured event trigger', function() {
 
         beforeEach(function() {

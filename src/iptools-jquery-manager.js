@@ -29,7 +29,7 @@
     this.initComponents = function() {
       $(selectors.componentNode).each(function(index, node) {
         var name = $(node).data(datas.component);
-        var options = $(node).data(datas.options) || {};
+        var options = $.extend({}, settings[name] || {}, $(node).data(datas.options) || {});
         if (!$(node).data('plugin_' + name)) {
           $(node)[name](options);
         }
