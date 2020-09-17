@@ -35,7 +35,10 @@ Components that should automatically initialise must define `data-component` and
 $('body').iptManager({
   callback: function() {}, // Callback function executed on component initialisation. Defaults to null.
   initEvent: 'ajax:complete', // Initialisation event that is thrown to (re)initialise components. Defaults to ajax:complete.
-  initEventEmitter: 'body' // Selector for element that will emit initialisation event. Defaults to body.
+  initEventEmitter: 'body', // Selector for element that will emit initialisation event. Defaults to body.
+  iptMlhMenu: {
+    title: 'Default Menu Title' // Default component option
+  }
 });
 ```
 
